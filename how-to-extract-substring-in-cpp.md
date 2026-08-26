@@ -1,15 +1,36 @@
-# Extracting a Substring in C++
+# Extracting Substring in C++
 
-To extract a substring, use:
+## What is a Substring?
 
-s.substr(start, length)
+A substring is a continuous part of a string.
 
-For a substring from index `i` to `j`:
+## Example
 
-s.substr(i, j - i + 1)
+String:
 
-Example:
+"abc"
 
-string sub = s.substr(i, j - i + 1);
+All substrings:
 
-`i` is the starting index and `j - i + 1` is the length.
+"a"
+"ab"
+"abc"
+"b"
+"bc"
+"c"
+
+## Basic Template
+
+```cpp
+string s = "abcdef";
+int n = s.length();
+
+for (int i = 0; i < n; i++) {
+    for (int j = i; j < n; j++) {
+
+        // Substring from index i to j
+        string sub = s.substr(i, j - i + 1);
+
+        // Use sub here
+    }
+}
